@@ -31,4 +31,36 @@ class UserController extends Controller
         return new UserResourceCollection($dataset);
     }
 
+    /**
+     * @param UserRequest $request
+     * @return UserResource
+     */
+    public function store(UserRequest $request)
+    {
+        $user = User::create($request->all());
+        return new UserResource($user);
+    }
+
+    /**
+     * @param User $user
+     * @param UserRequest $request
+     * @return UserResource
+     */
+    public function update(User $user, UserRequest $request): UserResource
+    {
+        $user->update($request->all());
+        return new UserResource($user);
+    }
+
+    /**
+     * @param User $user
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Exception
+     */
+    public function destroy(User $user)
+    {
+        $user->delete();
+        return response()->json();
+    }
+
 }
