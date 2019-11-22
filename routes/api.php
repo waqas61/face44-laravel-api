@@ -13,7 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
+header('Access-Control-Allow-Origin: *'); 
+header('Access-Control-Allow-Methods:  OPTIONS,DELETE');
+header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
 
-Route::group(['middleware' => ['api','cors']], function () {
+Route::group(['middleware' => ['cors','api']], function () {
 	Route::apiResource('user', 'UserController');
 });
