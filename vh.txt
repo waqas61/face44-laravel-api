@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+        ServerName www.face44-laravel-api.com
+        DocumentRoot /var/www/htdocs/face44-laravel-api/public
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+        </Directory>
+        <Directory /var/www/htdocs/face44-laravel-api>
+                AllowOverride All
+        </Directory>
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        LogLevel warn
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+192.168.85.142   www.face44-laravel-api.com
