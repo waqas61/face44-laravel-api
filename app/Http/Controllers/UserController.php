@@ -46,7 +46,7 @@ class UserController extends Controller
      * @param UserRequest $request
      * @return UserResource
      */
-    public function update(User $user, UserRequest $request): UserResource
+    public function update(User $user, Request $request): UserResource
     {
         $user->update($request->all());
         return new UserResource($user);

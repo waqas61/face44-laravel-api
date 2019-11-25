@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 
 header('Access-Control-Allow-Origin: *'); 
-header('Access-Control-Allow-Methods:  OPTIONS,DELETE');
+header('Access-Control-Allow-Methods:  OPTIONS,DELETE,PUT');
 header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
 
 Route::group(['middleware' => ['cors','api']], function () {
