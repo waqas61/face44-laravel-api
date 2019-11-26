@@ -12,7 +12,7 @@ class User extends Model
     use Notifiable;
 
 
-    protected $table = 'users';
+    protected $table = 'user';
     protected $primaryKey = 'id';
     public $timestamps = false;
 
