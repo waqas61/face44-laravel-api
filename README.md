@@ -28,7 +28,7 @@ cd face44-laravel-api
 # Install dependencies
 composer install
 
-# Create file .env
+# Create file .env and update with database credentials
 cp .env.example .env
 
 # Generate key
